@@ -1,0 +1,41 @@
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.exe.config
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.exe
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.pdb
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.dll
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.xml
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Form1.resources
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Kategoriler.resources
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Musteriler.resources
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Properties.Resources.resources
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.GenerateResource.cache
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.CopyComplete
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.exe
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.pdb
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Mobilyalar.resources
+C:\Users\HP\OneDrive - Anadolu Üniversitesi - AÖF\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Ozellikler.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.exe.config
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.exe
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\MobilyaMagaza.pdb
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.dll
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.xml
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.AssemblyReference.cache
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.SuggestedBindingRedirects.cache
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Form1.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Kategoriler.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Mobilyalar.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Musteriler.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Ozellikler.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Properties.Resources.resources
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.GenerateResource.cache
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.CoreCompileInputs.cache
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.csproj.CopyComplete
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.exe
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.pdb
+C:\Users\sinem\OneDrive\Masaüstü\Uygulamalarım Sinem\KitapOtomasyon\MobilyaMagaza\MobilyaMagaza\obj\Debug\MobilyaMagaza.Raporlar.resources

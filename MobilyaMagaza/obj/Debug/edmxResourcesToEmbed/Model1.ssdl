@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="MusterilerBilgiSet" EntityType="Model1.Store.MusterilerBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MobilyalarBilgiSet" EntityType="Model1.Store.MobilyalarBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OzelliklerBilgiSet" EntityType="Model1.Store.OzelliklerBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KullanicilarBilgiSet" EntityType="Model1.Store.KullanicilarBilgiSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MusterilerBilgiMobilyalarBilgi" Association="Model1.Store.MusterilerBilgiMobilyalarBilgi">
+      <End Role="MusterilerBilgi" EntitySet="MusterilerBilgiSet" />
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+    </AssociationSet>
+    <AssociationSet Name="MobilyalarBilgiOzelliklerBilgi" Association="Model1.Store.MobilyalarBilgiOzelliklerBilgi">
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+      <End Role="OzelliklerBilgi" EntitySet="OzelliklerBilgiSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MusterilerBilgiSet">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobilyalarBilgiSet">
+    <Key>
+      <PropertyRef Name="MobilyaNo" />
+    </Key>
+    <Property Name="MobilyaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobilyaAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaHammaddesi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OzelliklerBilgiSet">
+    <Key>
+      <PropertyRef Name="OzellikNo" />
+    </Key>
+    <Property Name="OzellikNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobilyaGrubu" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaRenk" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mensei" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KullanicilarBilgiSet">
+    <Key>
+      <PropertyRef Name="KullaniciNo" />
+    </Key>
+    <Property Name="KullaniciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MusterilerBilgiMobilyalarBilgi">
+    <End Role="MusterilerBilgi" Type="Model1.Store.MusterilerBilgiSet" Multiplicity="1" />
+    <End Role="MobilyalarBilgi" Type="Model1.Store.MobilyalarBilgiSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MusterilerBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="MobilyalarBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MobilyalarBilgiOzelliklerBilgi">
+    <End Role="MobilyalarBilgi" Type="Model1.Store.MobilyalarBilgiSet" Multiplicity="1" />
+    <End Role="OzelliklerBilgi" Type="Model1.Store.OzelliklerBilgiSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MobilyalarBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Principal>
+      <Dependent Role="OzelliklerBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

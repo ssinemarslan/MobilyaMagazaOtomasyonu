@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MusterilerBilgiSet" EntityType="Model1.MusterilerBilgi" />
+    <EntitySet Name="MobilyalarBilgiSet" EntityType="Model1.MobilyalarBilgi" />
+    <AssociationSet Name="MusterilerBilgiMobilyalarBilgi" Association="Model1.MusterilerBilgiMobilyalarBilgi">
+      <End Role="MusterilerBilgi" EntitySet="MusterilerBilgiSet" />
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+    </AssociationSet>
+    <EntitySet Name="OzelliklerBilgiSet" EntityType="Model1.OzelliklerBilgi" />
+    <AssociationSet Name="MobilyalarBilgiOzelliklerBilgi" Association="Model1.MobilyalarBilgiOzelliklerBilgi">
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+      <End Role="OzelliklerBilgi" EntitySet="OzelliklerBilgiSet" />
+    </AssociationSet>
+    <EntitySet Name="KullanicilarBilgiSet" EntityType="Model1.KullanicilarBilgi" />
+  </EntityContainer>
+  <EntityType Name="MusterilerBilgi">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdSoyad" Type="String" Nullable="false" />
+    <Property Name="MusteriAdres" Type="String" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobilyalarBilgi">
+    <Key>
+      <PropertyRef Name="MobilyaNo" />
+    </Key>
+    <Property Name="MobilyaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MobilyaAdi" Type="String" Nullable="false" />
+    <Property Name="MobilyaHammaddesi" Type="String" Nullable="false" />
+    <Property Name="MusteriNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="MusterilerBilgiMobilyalarBilgi">
+    <End Type="Model1.MusterilerBilgi" Role="MusterilerBilgi" Multiplicity="1" />
+    <End Type="Model1.MobilyalarBilgi" Role="MobilyalarBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MusterilerBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="MobilyalarBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OzelliklerBilgi">
+    <Key>
+      <PropertyRef Name="OzellikNo" />
+    </Key>
+    <Property Name="OzellikNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MobilyaGrubu" Type="String" Nullable="false" />
+    <Property Name="MobilyaRenk" Type="String" Nullable="false" />
+    <Property Name="Mensei" Type="String" Nullable="false" />
+    <Property Name="MobilyaNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="MobilyalarBilgiOzelliklerBilgi">
+    <End Type="Model1.MobilyalarBilgi" Role="MobilyalarBilgi" Multiplicity="1" />
+    <End Type="Model1.OzelliklerBilgi" Role="OzelliklerBilgi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MobilyalarBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Principal>
+      <Dependent Role="OzelliklerBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="KullanicilarBilgi">
+    <Key>
+      <PropertyRef Name="KullaniciNo" />
+    </Key>
+    <Property Name="KullaniciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" />
+    <Property Name="Sifre" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

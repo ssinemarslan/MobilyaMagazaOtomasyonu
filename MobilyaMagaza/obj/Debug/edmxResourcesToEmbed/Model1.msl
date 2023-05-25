@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="MusterilerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.MusterilerBilgi)">
+        <MappingFragment StoreEntitySet="MusterilerBilgiSet">
+          <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+          <ScalarProperty Name="MusteriAdSoyad" ColumnName="MusteriAdSoyad" />
+          <ScalarProperty Name="MusteriAdres" ColumnName="MusteriAdres" />
+          <ScalarProperty Name="MusteriTelefon" ColumnName="MusteriTelefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobilyalarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.MobilyalarBilgi)">
+        <MappingFragment StoreEntitySet="MobilyalarBilgiSet">
+          <ScalarProperty Name="MobilyaNo" ColumnName="MobilyaNo" />
+          <ScalarProperty Name="MobilyaAdi" ColumnName="MobilyaAdi" />
+          <ScalarProperty Name="MobilyaHammaddesi" ColumnName="MobilyaHammaddesi" />
+          <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OzelliklerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.OzelliklerBilgi)">
+        <MappingFragment StoreEntitySet="OzelliklerBilgiSet">
+          <ScalarProperty Name="OzellikNo" ColumnName="OzellikNo" />
+          <ScalarProperty Name="MobilyaGrubu" ColumnName="MobilyaGrubu" />
+          <ScalarProperty Name="MobilyaRenk" ColumnName="MobilyaRenk" />
+          <ScalarProperty Name="Mensei" ColumnName="Mensei" />
+          <ScalarProperty Name="MobilyaNo" ColumnName="MobilyaNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullanicilarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.KullanicilarBilgi)">
+        <MappingFragment StoreEntitySet="KullanicilarBilgiSet">
+          <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

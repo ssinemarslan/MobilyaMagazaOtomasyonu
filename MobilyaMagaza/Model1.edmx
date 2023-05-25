@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="MusterilerBilgiSet" EntityType="Model1.Store.MusterilerBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MobilyalarBilgiSet" EntityType="Model1.Store.MobilyalarBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OzelliklerBilgiSet" EntityType="Model1.Store.OzelliklerBilgiSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KullanicilarBilgiSet" EntityType="Model1.Store.KullanicilarBilgiSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MusterilerBilgiMobilyalarBilgi" Association="Model1.Store.MusterilerBilgiMobilyalarBilgi">
+      <End Role="MusterilerBilgi" EntitySet="MusterilerBilgiSet" />
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+    </AssociationSet>
+    <AssociationSet Name="MobilyalarBilgiOzelliklerBilgi" Association="Model1.Store.MobilyalarBilgiOzelliklerBilgi">
+      <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+      <End Role="OzelliklerBilgi" EntitySet="OzelliklerBilgiSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MusterilerBilgiSet">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MobilyalarBilgiSet">
+    <Key>
+      <PropertyRef Name="MobilyaNo" />
+    </Key>
+    <Property Name="MobilyaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobilyaAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaHammaddesi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OzelliklerBilgiSet">
+    <Key>
+      <PropertyRef Name="OzellikNo" />
+    </Key>
+    <Property Name="OzellikNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobilyaGrubu" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaRenk" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mensei" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobilyaNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KullanicilarBilgiSet">
+    <Key>
+      <PropertyRef Name="KullaniciNo" />
+    </Key>
+    <Property Name="KullaniciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MusterilerBilgiMobilyalarBilgi">
+    <End Role="MusterilerBilgi" Type="Model1.Store.MusterilerBilgiSet" Multiplicity="1" />
+    <End Role="MobilyalarBilgi" Type="Model1.Store.MobilyalarBilgiSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MusterilerBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="MobilyalarBilgi">
+        <PropertyRef Name="MusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MobilyalarBilgiOzelliklerBilgi">
+    <End Role="MobilyalarBilgi" Type="Model1.Store.MobilyalarBilgiSet" Multiplicity="1" />
+    <End Role="OzelliklerBilgi" Type="Model1.Store.OzelliklerBilgiSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MobilyalarBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Principal>
+      <Dependent Role="OzelliklerBilgi">
+        <PropertyRef Name="MobilyaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MusterilerBilgiSet" EntityType="Model1.MusterilerBilgi" />
+          <EntitySet Name="MobilyalarBilgiSet" EntityType="Model1.MobilyalarBilgi" />
+          <AssociationSet Name="MusterilerBilgiMobilyalarBilgi" Association="Model1.MusterilerBilgiMobilyalarBilgi">
+            <End Role="MusterilerBilgi" EntitySet="MusterilerBilgiSet" />
+            <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+          </AssociationSet>
+          <EntitySet Name="OzelliklerBilgiSet" EntityType="Model1.OzelliklerBilgi" />
+          <AssociationSet Name="MobilyalarBilgiOzelliklerBilgi" Association="Model1.MobilyalarBilgiOzelliklerBilgi">
+            <End Role="MobilyalarBilgi" EntitySet="MobilyalarBilgiSet" />
+            <End Role="OzelliklerBilgi" EntitySet="OzelliklerBilgiSet" />
+          </AssociationSet>
+          <EntitySet Name="KullanicilarBilgiSet" EntityType="Model1.KullanicilarBilgi" />
+        </EntityContainer>
+        <EntityType Name="MusterilerBilgi">
+          <Key>
+            <PropertyRef Name="MusteriNo" />
+          </Key>
+          <Property Name="MusteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriAdSoyad" Type="String" Nullable="false" />
+          <Property Name="MusteriAdres" Type="String" Nullable="false" />
+          <Property Name="MusteriTelefon" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MobilyalarBilgi">
+          <Key>
+            <PropertyRef Name="MobilyaNo" />
+          </Key>
+          <Property Name="MobilyaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MobilyaAdi" Type="String" Nullable="false" />
+          <Property Name="MobilyaHammaddesi" Type="String" Nullable="false" />
+          <Property Name="MusteriNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="MusterilerBilgiMobilyalarBilgi">
+          <End Type="Model1.MusterilerBilgi" Role="MusterilerBilgi" Multiplicity="1" />
+          <End Type="Model1.MobilyalarBilgi" Role="MobilyalarBilgi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MusterilerBilgi">
+              <PropertyRef Name="MusteriNo" />
+            </Principal>
+            <Dependent Role="MobilyalarBilgi">
+              <PropertyRef Name="MusteriNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OzelliklerBilgi">
+          <Key>
+            <PropertyRef Name="OzellikNo" />
+          </Key>
+          <Property Name="OzellikNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MobilyaGrubu" Type="String" Nullable="false" />
+          <Property Name="MobilyaRenk" Type="String" Nullable="false" />
+          <Property Name="Mensei" Type="String" Nullable="false" />
+          <Property Name="MobilyaNo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="MobilyalarBilgiOzelliklerBilgi">
+          <End Type="Model1.MobilyalarBilgi" Role="MobilyalarBilgi" Multiplicity="1" />
+          <End Type="Model1.OzelliklerBilgi" Role="OzelliklerBilgi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MobilyalarBilgi">
+              <PropertyRef Name="MobilyaNo" />
+            </Principal>
+            <Dependent Role="OzelliklerBilgi">
+              <PropertyRef Name="MobilyaNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="KullanicilarBilgi">
+          <Key>
+            <PropertyRef Name="KullaniciNo" />
+          </Key>
+          <Property Name="KullaniciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" Nullable="false" />
+          <Property Name="Sifre" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container1">
+    <EntitySetMapping Name="MusterilerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.MusterilerBilgi)">
+        <MappingFragment StoreEntitySet="MusterilerBilgiSet">
+          <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+          <ScalarProperty Name="MusteriAdSoyad" ColumnName="MusteriAdSoyad" />
+          <ScalarProperty Name="MusteriAdres" ColumnName="MusteriAdres" />
+          <ScalarProperty Name="MusteriTelefon" ColumnName="MusteriTelefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobilyalarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.MobilyalarBilgi)">
+        <MappingFragment StoreEntitySet="MobilyalarBilgiSet">
+          <ScalarProperty Name="MobilyaNo" ColumnName="MobilyaNo" />
+          <ScalarProperty Name="MobilyaAdi" ColumnName="MobilyaAdi" />
+          <ScalarProperty Name="MobilyaHammaddesi" ColumnName="MobilyaHammaddesi" />
+          <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OzelliklerBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.OzelliklerBilgi)">
+        <MappingFragment StoreEntitySet="OzelliklerBilgiSet">
+          <ScalarProperty Name="OzellikNo" ColumnName="OzellikNo" />
+          <ScalarProperty Name="MobilyaGrubu" ColumnName="MobilyaGrubu" />
+          <ScalarProperty Name="MobilyaRenk" ColumnName="MobilyaRenk" />
+          <ScalarProperty Name="Mensei" ColumnName="Mensei" />
+          <ScalarProperty Name="MobilyaNo" ColumnName="MobilyaNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullanicilarBilgiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.KullanicilarBilgi)">
+        <MappingFragment StoreEntitySet="KullanicilarBilgiSet">
+          <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
